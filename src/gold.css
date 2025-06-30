@@ -1,0 +1,371 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button svg {
+  margin-left: 10px;
+}
+
+tbody tr td svg {
+  margin-right: 10px;
+}
+
+@theme {
+  --breakpoint-xs: 20rem;
+  --breakpoint-xd: 23rem;
+  --breakpoint-xm: 26rem;
+  
+  /* PREMIUM CHAMPAGNE GOLD THEME - Luxury Colors */
+  --color-primary-50: #fdf6e3;
+  --color-primary-100: #faebcd;
+  --color-primary-200: #f4d79e;
+  --color-primary-300: #ecbd6e;
+  --color-primary-400: #e4a853;
+  --color-primary-500: #d4983d;  /* Premium champagne gold */
+  --color-primary-600: #b8832c;
+  --color-primary-700: #996f26;
+  --color-primary-800: #7d5a24;
+  --color-primary-900: #6b4c25;
+  --color-primary-950: #3d2a12;
+  
+  /* EMERALD TO PREMIUM GOLD OVERRIDE */
+  --color-emerald-50: #fdf6e3;
+  --color-emerald-100: #faebcd;
+  --color-emerald-200: #f4d79e;
+  --color-emerald-300: #ecbd6e;
+  --color-emerald-400: #e4a853;
+  --color-emerald-500: #d4983d;  /* Premium champagne gold */
+  --color-emerald-600: #b8832c;
+  --color-emerald-700: #996f26;
+  --color-emerald-800: #7d5a24;
+  --color-emerald-900: #6b4c25;
+  --color-emerald-950: #3d2a12;
+  
+  /* YELLOW TO PREMIUM GOLD OVERRIDE */
+  --color-yellow-50: #fdf6e3;
+  --color-yellow-100: #faebcd;
+  --color-yellow-200: #f4d79e;
+  --color-yellow-300: #ecbd6e;
+  --color-yellow-400: #e4a853;
+  --color-yellow-500: #d4983d;
+  --color-yellow-600: #b8832c;
+  --color-yellow-700: #996f26;
+  --color-yellow-800: #7d5a24;
+  --color-yellow-900: #6b4c25;
+  --color-yellow-950: #3d2a12;
+}
+
+:root {
+  /* Base font settings */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* PREMIUM CHAMPAGNE GOLD & BLACK THEME COLORS */
+  --color-primary: #d4983d;
+  --color-primary-dark: #b8832c;
+  --color-primary-light: #e4a853;
+  --color-secondary: #000000;
+  
+  /* Background colors */
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #0a0a0a;
+  --color-bg-tertiary: #141414;
+  --color-bg-card: #1a1a1a;
+  --color-bg-hover: #262626;
+  
+  /* Text colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d4983d;
+  --color-text-muted: #a1a1aa;
+  --color-text-accent: #e4a853;
+  
+  /* Border colors */
+  --color-border-primary: #d4983d;
+  --color-border-secondary: #b8832c;
+  --color-border-muted: #3f3f46;
+
+  /* Apply base styling */
+  color-scheme: dark;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* SIMPLE COLOR OVERRIDES - NO BACKGROUNDS OR BORDERS */
+.text-emerald-50, .text-emerald-100, .text-emerald-200, .text-emerald-300,
+.text-emerald-400, .text-emerald-500, .text-emerald-600, .text-emerald-700,
+.text-emerald-800, .text-emerald-900, .text-emerald-950 {
+  color: #d4983d !important;
+}
+
+.hover\:text-emerald-50:hover, .hover\:text-emerald-100:hover, .hover\:text-emerald-200:hover,
+.hover\:text-emerald-300:hover, .hover\:text-emerald-400:hover, .hover\:text-emerald-500:hover,
+.hover\:text-emerald-600:hover, .hover\:text-emerald-700:hover, .hover\:text-emerald-800:hover,
+.hover\:text-emerald-900:hover, .hover\:text-emerald-950:hover {
+  color: #e4a853 !important;
+}
+
+/* BUTTON BACKGROUNDS ONLY */
+.bg-emerald-600, .bg-emerald-700, .bg-emerald-500 {
+  background-color: #d4983d !important;
+}
+
+.hover\:bg-emerald-700:hover, .hover\:bg-emerald-600:hover, .hover\:bg-emerald-500:hover {
+  background-color: #b8832c !important;
+}
+
+/* CARD AND PRICING BACKGROUNDS */
+.bg-emerald-50, .bg-emerald-100, .bg-emerald-200, .bg-emerald-300,
+.bg-emerald-400, .bg-emerald-800, .bg-emerald-900, .bg-emerald-950 {
+  background-color: #d4983d !important;
+}
+
+/* EMERALD BACKGROUNDS WITH OPACITY */
+.bg-emerald-600\/20 {
+  background-color: rgba(212, 152, 61, 0.2) !important;
+}
+
+.bg-emerald-500\/20 {
+  background-color: rgba(212, 152, 61, 0.2) !important;
+}
+
+.bg-emerald-900\/20 {
+  background-color: rgba(153, 111, 38, 0.2) !important;
+}
+
+/* SPECIFIC PRICING CARD SELECTORS */
+.bg-emerald-600 {
+  background-color: #d4983d !important;
+}
+
+.bg-emerald-500 {
+  background-color: #d4983d !important;
+}
+
+/* DARKER EMERALD BACKGROUNDS FOR CARDS */
+.bg-emerald-800 {
+  background-color: #b8832c !important;
+}
+
+.bg-emerald-900 {
+  background-color: #996f26 !important;
+}
+
+/* PRICING CARD SPECIFIC BACKGROUNDS */
+.bg-gradient-to-r.from-emerald-600.to-emerald-800,
+.bg-gradient-to-br.from-emerald-600.to-emerald-800,
+.bg-gradient-to-l.from-emerald-600.to-emerald-800 {
+  background: linear-gradient(135deg, #d4983d, #b8832c) !important;
+}
+
+/* HOVER STATES FOR CARD BACKGROUNDS */
+.hover\:bg-emerald-50:hover, .hover\:bg-emerald-100:hover, .hover\:bg-emerald-200:hover,
+.hover\:bg-emerald-300:hover, .hover\:bg-emerald-400:hover, .hover\:bg-emerald-800:hover,
+.hover\:bg-emerald-900:hover, .hover\:bg-emerald-950:hover {
+  background-color: #b8832c !important;
+}
+
+/* BORDER COLORS ONLY FOR ACTUAL BORDERS */
+.border-emerald-500, .border-emerald-600, .border-emerald-400, .border-emerald-300 {
+  border-color: #d4983d !important;
+}
+
+.border-emerald-800\/30 {
+  border-color: rgba(185, 131, 44, 0.3) !important;
+}
+
+.border-2.border-emerald-300 {
+  border-color: #d4983d !important;
+}
+
+.focus\:border-emerald-500:focus {
+  border-color: #d4983d !important;
+}
+
+/* FORM INPUT BORDER STATES */
+.focus-within\:border-emerald-500:focus-within {
+  border-color: #d4983d !important;
+}
+
+.border-gray-600 {
+  border-color: #52525b !important;
+}
+
+.border-gray-800 {
+  border-color: #27272a !important;
+}
+
+/* INPUT FOCUS STATES */
+input:focus {
+  border-color: #d4983d !important;
+}
+
+/* SPECIFIC FOCUS WITHIN STATES FOR FORM CONTAINERS */
+div.focus-within\:border-emerald-500:focus-within,
+.focus-within\:border-emerald-500:focus-within,
+.focus-within\:border-emerald-600:focus-within {
+  border-color: #d4983d !important;
+}
+
+/* IMAGE UPLOAD COMPONENT BORDERS */
+.border-emerald-300,
+.border-2.border-emerald-300,
+div.border-2.border-emerald-300 {
+  border-color: #d4983d !important;
+}
+
+/* SPINNER COLORS */
+.border-emerald-500 {
+  border-color: #d4983d !important;
+}
+
+.border-t-transparent {
+  border-top-color: transparent !important;
+}
+
+/* ACCENT COLORS */
+.accent-emerald-500 {
+  accent-color: #d4983d !important;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* FAQ animations */
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+  }
+}
+
+.faq-content-enter {
+  animation: accordionIn 0.3s ease forwards;
+  overflow: hidden;
+  will-change: max-height, opacity, transform;
+}
+
+/* Responsive fixes */
+html, body {
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+@media (max-width: 640px) {
+  h1, h2 {
+    word-break: break-word;
+  }
+}
+
+/* FOOTER STYLING */
+footer {
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(8px);
+  border-top: 1px solid #374151;
+  color: #ffffff;
+}
+
+footer .text-emerald-50 {
+  color: #d4983d !important;
+}
+
+footer h5 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+footer p {
+  color: #9ca3af !important;
+}
+
+footer a {
+  color: #d1d5db !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #e4a853 !important;
+}
+
+footer ul li {
+  margin: 0.5rem 0;
+}
+
+footer .hover\:text-emerald-500:hover {
+  color: #e4a853 !important;
+}
+
+/* ESSENTIAL BOX SIZING */
+* {
+  box-sizing: border-box;
+}
+
+/* SHADOW COLORS */
+.shadow-emerald-500\/20 {
+  box-shadow: 0 10px 15px -3px rgba(212, 152, 61, 0.2), 0 4px 6px -2px rgba(212, 152, 61, 0.1) !important;
+}
+
+/* FORCE ALL EMERALD COLORS TO GOLD - HIGHEST PRIORITY */
+[class*="bg-emerald"] {
+  background-color: #d4983d !important;
+}
+
+[class*="bg-emerald-600"] {
+  background-color: #d4983d !important;
+}
+
+[class*="bg-emerald-500"] {
+  background-color: #d4983d !important;
+}
+
+[class*="bg-emerald-800"] {
+  background-color: #b8832c !important;
+}
+
+[class*="bg-emerald-900"] {
+  background-color: #996f26 !important;
+}
+
+/* FORCE ALL EMERALD BORDERS TO GOLD */
+[class*="border-emerald"] {
+  border-color: #d4983d !important;
+}
+
+/* FORCE ALL EMERALD TEXT TO GOLD */
+[class*="text-emerald"] {
+  color: #d4983d !important;
+}

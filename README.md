@@ -1,1 +1,1 @@
-# edu-pay
+# react_demo_edu
